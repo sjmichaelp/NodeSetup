@@ -4,6 +4,8 @@ const fetch = require("node-fetch");
 const request = require("request");
 const fs = require("fs");
 
+const port = process.env.PORT || 8080;
+
 var app = express();
 var url ='';
 
@@ -77,8 +79,8 @@ app.get('/404', (request, response) => {
 	})
 })
 
-app.listen(8080, () => {
-	console.log('Server is up on the port 8080');
+app.listen(port, () => {
+	console.log('Server is up on the port ${port}');
 	request({
 	        url: 'https://jsonplaceholder.typicode.com/photos/1',
 	        json: true
