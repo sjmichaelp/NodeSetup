@@ -53,7 +53,9 @@ app.get('/', (request, response) => {
     response.send('<h1>Home Page</h1>' +
         '<a href="/about">About me</a>' +
         '<p></p>' +
-        '<a href="/image">Image</a>');
+        '<a href="/image">Image</a>' + 
+        '<p></p>' +
+        '<a href="/empty_page">Empty page</a>');
 });
 
 app.get('/about', (request, response) => {
